@@ -13,7 +13,7 @@ def scan_subdir(model_type):
     for filename in os.listdir(dir_path):
         
         if model_type == 'keras':
-            if filename.endswith('.h5'):
+            if filename.endswith('.json'):
                 available_models.append(filename)
         elif model_type == 'pytorch':
             if filename.endswith('.pt'):
