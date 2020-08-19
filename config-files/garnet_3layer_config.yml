@@ -1,6 +1,6 @@
-1;95;0cKerasJson: model_quantized.json
-KerasH5:   weights_quantized.h5
-OutputDir: quantized
+KerasJson: garnet_3layer.json
+KerasH5:   garnet_3layer_weights.h5
+OutputDir: garnet_3layer
 ProjectName: myproject
 XilinxPart: xcku115-flvb2104-2-i
 ClockPeriod: 5
