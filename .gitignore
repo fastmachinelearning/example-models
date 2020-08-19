@@ -9,3 +9,5 @@
 !onnx/**
 !tensorflow/**
 !torch/**
+!data/**
+!config-files/**
