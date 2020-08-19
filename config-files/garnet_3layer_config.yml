@@ -1,0 +1,37 @@
+KerasJson: garnet_3layer.json
+KerasH5:   garnet_3layer_weights.h5
+OutputDir: garnet_3layer
+ProjectName: myproject
+XilinxPart: xcku115-flvb2104-2-i
+ClockPeriod: 5
+
+IOType: io_parallel # options: io_serial/io_parallel
+
+HLSConfig:
+  Model:
+    Precision: ap_fixed<16, 6>
+    ReuseFactor: 1
+    Strategy: Resource
+  LayerType:
+    GarNetStack:
+      ReuseFactor: 32
+      Precision:
+        # Default precision type is only used to represent weights
+        default: ap_fixed<16, 6, AP_RND, AP_SAT>
+        result: ap_fixed<16, 6>
+    Dense:
+      Precision:
+        accum: ap_fixed<18, 8>
+        result: ap_fixed<16, 6, AP_RND, AP_SAT>
+      Strategy: Latency
+  LayerName:
+     input_1:
+       Precision:
+         result: ap_fixed<14, 5, AP_RND, AP_SAT>
+     input_2:
+       Precision:
+         result: ap_uint<10>
+     regression_linear:
+       Precision:
+        result: ap_fixed<16, 6, AP_RND, AP_SAT>
+  Optimizers: ['eliminate_linear_activation']
