@@ -1,0 +1,45 @@
+KerasJson: qkeras_mnist_dense.json
+KerasH5:   qkeras_mnist_dense_weights.h5
+OutputDir: qkeras_mnist_dense
+ProjectName: myproject
+XilinxPart: xcku115-flvb2104-2-i
+ClockPeriod: 5
+
+IOType: io_parallel # options: io_serial/io_parallel
+
+HLSConfig:
+    Model:
+      Precision: ap_fixed<16,6>
+      ReuseFactor: 1
+      Strategy: Resource
+    LayerName:
+      activation_3:
+        Precision: ap_fixed<16,6>
+        ReuseFactor: 1
+        Strategy: Stable
+        exp_table_t: ap_fixed<18,8,AP_RND,AP_SAT>
+        inv_table_t: ap_fixed<18,8,AP_RND,AP_SAT>
+        table_size: 1024
+      input_3:
+        Precision:
+          result: ap_fixed<16,6>
+      q_activation_2:
+        Precision:
+          result: ap_fixed<3,1>
+        ReuseFactor: 1
+      q_activation_3:
+        Precision:
+          result: ap_fixed<4,2>
+        ReuseFactor: 1
+      q_dense_2:
+        Precision:
+          bias: ap_fixed<3,1>
+          weight: ap_int<5>
+        ReuseFactor: 112
+      q_dense_3:
+        Precision:
+          bias: ap_fixed<5,1>
+          weight: ap_fixed<5,1>
+        ReuseFactor: 1
+        Strategy: Latency
+
