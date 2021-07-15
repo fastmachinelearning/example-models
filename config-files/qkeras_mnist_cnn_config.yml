@@ -1,0 +1,59 @@
+Backend: Vivado
+ClockPeriod: 5
+HLSConfig:
+  LayerName:
+    input_1:
+      Precision:
+        result: ap_fixed<16,6>
+      Trace: true
+    max_pooling2d:
+      Precision: ap_fixed<16,6>
+      Trace: true
+    max_pooling2d_1:
+      Precision: ap_fixed<16,6>
+      Trace: true
+    q_activation:
+      Precision:
+        result: ap_fixed<7,1,AP_RND,AP_SAT>
+      ReuseFactor: 1
+      Trace: true
+    q_activation_1:
+      Precision:
+        result: ap_fixed<7,1,AP_RND,AP_SAT>
+      ReuseFactor: 1
+      Trace: true
+    q_conv2d:
+      Precision:
+        bias: ap_fixed<6,1>
+        weight: ap_fixed<6,1>
+      ReuseFactor: 1
+      Trace: true
+    q_conv2d_1:
+      Precision:
+        bias: ap_fixed<6,1>
+        weight: ap_fixed<6,1>
+      ReuseFactor: 1
+      Trace: true
+    q_dense:
+      Precision:
+        bias: ap_fixed<6,1>
+        weight: ap_fixed<6,1>
+      ReuseFactor: 1
+      Trace: true
+    softmax:
+      Precision: ap_fixed<16,6>
+      ReuseFactor: 1
+      Trace: true
+      exp_table_t: ap_fixed<18,12,AP_RND,AP_SAT>
+      inv_table_t: ap_fixed<18,4,AP_RND,AP_SAT>
+      table_size: 1024
+  Model:
+    Precision: ap_fixed<16,6>
+    ReuseFactor: 16
+    Strategy: Latency
+IOType: io_stream
+KerasH5: keras/qkeras_mnist_cnn_weights.h5
+KerasJson: keras/qkeras_mnist_cnn.json
+OutputDir: my-hls-test
+ProjectName: myproject
+XilinxPart: xcku115-flvb2104-2-i
