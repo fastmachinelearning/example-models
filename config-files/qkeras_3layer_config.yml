@@ -1,0 +1,64 @@
+Backend: Vivado
+ClockPeriod: 5
+HLSConfig:
+  LayerName:
+    fc1:
+      Precision:
+        bias: ap_fixed<6,1>
+        weight: ap_fixed<6,1>
+      ReuseFactor: 1
+      Trace: true
+    fc1_input:
+      Precision:
+        result: ap_fixed<16,6>
+      Trace: true
+    fc2:
+      Precision:
+        bias: ap_fixed<6,1>
+        weight: ap_fixed<6,1>
+      ReuseFactor: 1
+      Trace: true
+    fc3:
+      Precision:
+        bias: ap_fixed<6,1>
+        weight: ap_fixed<6,1>
+      ReuseFactor: 1
+      Trace: true
+    output:
+      Precision:
+        bias: ap_fixed<6,1>
+        weight: ap_fixed<6,1>
+      ReuseFactor: 1
+      Trace: true
+    relu1:
+      Precision:
+        result: ap_fixed<7,1,AP_RND_CONV,AP_SAT>
+      ReuseFactor: 1
+      Trace: true
+    relu2:
+      Precision:
+        result: ap_fixed<7,1,AP_RND_CONV,AP_SAT>
+      ReuseFactor: 1
+      Trace: true
+    relu3:
+      Precision:
+        result: ap_fixed<7,1,AP_RND_CONV,AP_SAT>
+      ReuseFactor: 1
+      Trace: true
+    softmax:
+      Precision: ap_fixed<16,6>
+      ReuseFactor: 1
+      Trace: true
+      exp_table_t: ap_fixed<18,8>
+      inv_table_t: ap_fixed<18,4>
+      table_size: 1024
+  Model:
+    Precision: ap_fixed<16,6>
+    ReuseFactor: 1
+    Strategy: Latency
+IOType: io_parallel
+KerasH5: keras/qkeras_3layer_weights.h5
+KerasJson: keras/qkeras_3layer.json
+OutputDir: my-hls-test
+ProjectName: myproject
+XilinxPart: xcku115-flvb2104-2-i
