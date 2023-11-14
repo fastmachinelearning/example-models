@@ -1,1 +1,40 @@
-{"keras": ["KERAS_3layer.json", "garnet_1layer.json", "KERAS_dense_16x500x500x500x500x500x5.json", "KERAS_conv1d_small.json", "qkeras_mnist_cnn.json", "KERAS_1layer.json", "KERAS_3layer_binarydense_relu_max.json", "KERAS_3layer_binary_smaller.json", "KERAS_conv1d.json", "KERAS_conv2d_model.json", "jetTagger_Conv2D_Small_NoBatchNorm.json", "keras_bnn.json", "KERAS_3layer_ternary_small.json", "garnet_3layer.json", "KERAS_dense_16x100x100x100x100x100x5.json", "KERAS_dense_16x200x200x200x200x200x5.json", "qkeras_mnist_dense.json", "qkeras_3layer.json", "jetTagger_Conv2D_Small.json", "KERAS_3layer_batch_norm.json"], "pytorch": ["two_layer_model.pt", "three_layer_model.pt"], "onnx": ["conv1d_small_keras.onnx", "three_layer_bn_pytorch.onnx", "three_layer_bn_keras.onnx", "dense_big_keras.onnx", "three_layer_pytorch.onnx", "two_layer_pytorch.onnx", "conv2d_small_mp_keras.onnx", "two_layer_keras.onnx", "three_layer_keras.onnx", "conv2d_small_keras.onnx"], "tensorflow": ["3layer.pb"]}
+{
+    "keras": [
+        "KERAS_3layer.json",
+        "garnet_1layer.json",
+        "KERAS_dense_16x500x500x500x500x500x5.json",
+        "KERAS_conv1d_small.json",
+        "qkeras_mnist_cnn.json",
+        "KERAS_1layer.json",
+        "KERAS_3layer_binarydense_relu_max.json",
+        "KERAS_3layer_binary_smaller.json",
+        "KERAS_conv1d.json",
+        "KERAS_conv2d_model.json",
+        "jetTagger_Conv2D_Small_NoBatchNorm.json",
+        "keras_bnn.json",
+        "KERAS_3layer_ternary_small.json",
+        "garnet_3layer.json",
+        "KERAS_dense_16x100x100x100x100x100x5.json",
+        "KERAS_dense_16x200x200x200x200x200x5.json",
+        "qkeras_mnist_dense.json",
+        "qkeras_3layer.json",
+        "jetTagger_Conv2D_Small.json",
+        "KERAS_3layer_batch_norm.json"
+    ],
+    "pytorch": [
+        "two_layer_model.pt",
+        "three_layer_model.pt"
+    ],
+    "onnx": [
+        "conv1d_small_keras.onnx",
+        "three_layer_bn_pytorch.onnx",
+        "three_layer_bn_keras.onnx",
+        "dense_big_keras.onnx",
+        "three_layer_pytorch.onnx",
+        "two_layer_pytorch.onnx",
+        "conv2d_small_mp_keras.onnx",
+        "two_layer_keras.onnx",
+        "three_layer_keras.onnx",
+        "conv2d_small_keras.onnx"
+    ]
+}

@@ -1,6 +1,18 @@
+KerasJson: keras/qkeras_mnist_cnn.json
+KerasH5:   keras/qkeras_mnist_cnn_weights.h5
 Backend: Vivado
+OutputDir: qkeras_mnist_cnn
+ProjectName: myproject
+Part: xcvu9p-flga2577-2-e
 ClockPeriod: 5
+
+IOType: io_stream
+
 HLSConfig:
+  Model:
+    Precision: ap_fixed<16,6>
+    ReuseFactor: 16
+    Strategy: Latency
   LayerName:
     input_1:
       Precision:
@@ -47,13 +59,3 @@ HLSConfig:
       exp_table_t: ap_fixed<18,12,AP_RND,AP_SAT>
       inv_table_t: ap_fixed<18,4,AP_RND,AP_SAT>
       table_size: 1024
-  Model:
-    Precision: ap_fixed<16,6>
-    ReuseFactor: 16
-    Strategy: Latency
-IOType: io_stream
-KerasH5: keras/qkeras_mnist_cnn_weights.h5
-KerasJson: keras/qkeras_mnist_cnn.json
-OutputDir: my-hls-test
-ProjectName: myproject
-XilinxPart: xcku115-flvb2104-2-i
