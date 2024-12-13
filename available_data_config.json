@@ -142,5 +142,17 @@
     "3layer.pb": {
         "example_data": false,
         "example_config": false
+    },
+    "hgq_jet_classifier.h5": {
+        "example_data": false,
+        "example_config": false
+    },
+    "hgq_mnist_homogeneous.h5": {
+        "example_data": false,
+        "example_config": false
+    },
+    "hgq_mnist_heterogeneous.h5": {
+        "example_data": false,
+        "example_config": false
     }
 }
