@@ -19,7 +19,10 @@
         "KERAS_dense_16x200x200x200x200x200x5.json",
         "garnet_3layer.json",
         "KERAS_1layer.json",
-        "KERAS_3layer_binarydense_relu_max.json"
+        "KERAS_3layer_binarydense_relu_max.json",
+        "hgq_jet_classifier.h5",
+        "hgq_mnist_homogeneous.h5",
+        "hgq_mnist_heterogeneous.h5"
     ],
     "pytorch": [
         "two_layer_model.pt",
