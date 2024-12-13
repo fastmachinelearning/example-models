@@ -138,9 +138,5 @@
     "three_layer_bn_pytorch.onnx": {
         "example_data": false,
         "example_config": false
-    },
-    "3layer.pb": {
-        "example_data": false,
-        "example_config": false
     }
 }
