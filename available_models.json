@@ -39,8 +39,5 @@
         "conv2d_small_mp_keras.onnx",
         "dense_big_keras.onnx",
         "three_layer_bn_pytorch.onnx"
-    ],
-    "tensorflow": [
-        "3layer.pb"
     ]
 }
