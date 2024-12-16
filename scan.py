@@ -48,10 +48,6 @@ def scan_subdir(model_type):
             if filename.endswith('.pt'):
                 available_models.append(filename)
                 data_config_avai[filename] = scan_data_config(filename[:-3])
-        elif model_type == 'tensorflow':
-            if filename.endswith('.pb'):
-                available_models.append(filename)
-                data_config_avai[filename] = scan_data_config(filename[:-3])
         elif model_type == 'onnx':
             if filename.endswith('.onnx'):
                 available_models.append(filename)
@@ -62,7 +58,7 @@ def scan_subdir(model_type):
 def scan():
     """Scan all directories that contain example models and write to a file."""
     
-    available_types = ['keras', 'pytorch', 'onnx', 'tensorflow']
+    available_types = ['keras', 'pytorch', 'onnx']
     
     #Dictionary to save available model list
     model_dict = {}
